@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+            background-color: gainsboro;
+        }
+        .nav-color{
+            /* background-color: gray; */
+            color: white;
+        }
+        .wrapper{
+            height: calc(100vh - 80px);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            align-content: start;
+            /* background-color: yellow; */
+        }
+        .image1{
+            /* background-color: green; */
+            height: 450px;
+            width: 450px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        img{
+            height: 400px;
+            width: 400px;
+        }
+        
+        .text p,.review p b{
+            font-weight: bolder;
+            font-size: 30px;
+            font-family: cursive;
+        }
+        .products{
+            /* margin-top: 10px; */
+            margin-bottom: 10px;
+            margin-left: 4px;
+            margin-right: 4px;
+            border-radius: 10px;
+            height: auto;
+            width: calc(100%-4px);
+            background-color: rgba(211, 211, 211, 0.557);
+        }
+        .pr{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        .products p b{
+            
+            font-size: 40px;
+            font-family: cursive;
+        }
+        .review{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 4px;
+            margin-right: 4px;
+            background-color: gray;
+            height: auto;
+            padding: 10px;
+            width: calc(100%-4px);
+         
+            border-radius: 10px;
+        }
+        .xyz{
+            /* background-color: green; */
+            padding: 10px;
+            position: relative;
+            bottom: 28px;
+        }
+        #contact{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 4px;
+            margin-right: 4px;
+            padding:5px;
+            background-color: darkgray;
+            width: calc(100%-4px);  
+            height: auto;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .contact-form {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    }
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+      margin-bottom: 20px;
+    }
+    .contact-form button {
+      background-color: #007bff;
+      color: #ffffff;
+    }
+        @media screen and (max-width: 290px){
+            .text p {
+   display: none;
+  }
+        }
+        @media screen and (max-width: 625px) {
+  .text p {
+    /* background-color: lightgreen; */
+    font-size: 18px;
+  }
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg nav-color bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand text-light" href="#">TechFusionHub</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#product">HotProducts  <i class="fa-solid fa-fire" style="color: #ffd000;"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#rev">Review</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#con">ContactUs</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="container-fluid">
+            <div></div>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+    </nav>
+    <div class="alert alert-primary alert-dismissible" role="alert">
+        <b>New Products are Listed !!!</b> check it out.
+    </div>
+    <div class="wrapper">
+        <div class="image1">
+            <img src="img1.png" alt="" srcset="">
+        </div>
+        <div class="text">
+            <p>Where Innovation Meets<br>Imagination - Explore the Future Today!</p>
+        </div>
+        
+    </div>
+    <div class="products" id="product">
+        <p style="text-align: center;"><b>Hot Products</b></p>
+        <div class="pr">
+            <div class="card" style="width: 18rem; margin: 10px;">
+                <img src="img2.png" class="card-img-top" alt="..." style="height: 240px;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                </ul>
+                <div class="card-body">
+                    <button type="button" class="btn btn-primary">Buy Product</button>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem; margin: 10px;">
+                <img src="img2.png" class="card-img-top" alt="..." style="height: 240px;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                </ul>
+                <div class="card-body">
+                    <button type="button" class="btn btn-primary">Buy Product</button>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem; margin: 10px;">
+                <img src="img2.png" class="card-img-top" alt="..." style="height: 240px;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                </ul>
+                <div class="card-body">
+                    <button type="button" class="btn btn-primary">Buy Product</button>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem; margin: 10px;">
+                <img src="img2.png" class="card-img-top" alt="..." style="height: 240px;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                </ul>
+                <div class="card-body">
+                    <button type="button" class="btn btn-primary">Buy Product</button>
+                </div>
+            </div>
+        </div>
+        
+          
+    </div>  
+    <div class="review" id="rev">
+        <p style="text-align: center;"><b>Reviews</b></p>
+        <div class="container-reviews">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Review Title</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p class="card-text"><small class="text-muted">Posted by User123</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Another Review Title</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p class="card-text"><small class="text-muted">Posted by User456</small></p>
+                        </div>
+                    </div>
+                </div>
+                  <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Review Title</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p class="card-text"><small class="text-muted">Posted by User123</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Review Title</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p class="card-text"><small class="text-muted">Posted by User123</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div id="contact" id="con">
+        <p style="text-align: center;"></p>
+        <div class="xyz container mt-5">
+            <div class="row">
+              <div class="col-md-6 mx-auto">
+                <div class="contact-form">
+                  <h2 class="text-center mb-4">Contact Us</h2>
+                  <form>
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                      <input type="email" class="form-control" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                      <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-block">Send Message</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    <footer class="bg-dark text-light py-4">
+        <div class="container text-center">
+            <p>&copy; 2023 My Landing Page. All rights reserved.</p>
+            <p>Email: info@example.com | Phone: +1 (123) 456-7890</p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                <li class="list-inline-item"><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
